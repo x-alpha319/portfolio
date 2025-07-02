@@ -3,7 +3,7 @@ import Body from "./Pages/Body";
 import Shop from "./Components/Shop";
 import MainLayout from "./Layout/MainLayout";
 import Login from "./Pages/Auth/Login";
-import Authlayout from "./Layout/Authlayout";
+import Authlayout from "./Layout/AuthLayout";
 import DashLayout from "./Layout/DashLayout";
 import Dashboard from "./Pages/Dash/Dashborad";
 import YupLogin from "./Pages/Auth/YupLogin";
@@ -18,7 +18,7 @@ function App() {
             <Route path="shop" element={<Shop />} />
           </Route>
           <Route>
-            <Route path="/Auth" element={<Authlayout />}>
+            <Route path="/Auth" element={<AuthLayout />}>
               <Route path="login" element={<Login />} />
               <Route path="YupLogin" element={<YupLogin />} />
             </Route>
