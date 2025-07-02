@@ -3,7 +3,7 @@ import Body from "./Pages/Body";
 import Shop from "./Components/Shop";
 import MainLayout from "./Layout/MainLayout";
 import Login from "./Pages/Auth/Login";
-import Authlayout from "./Layout/AuthLayout";
+import AuthLayout from "./Layout/AuthLayout";
 import DashLayout from "./Layout/DashLayout";
 import Dashboard from "./Pages/Dash/Dashborad";
 import YupLogin from "./Pages/Auth/YupLogin";
