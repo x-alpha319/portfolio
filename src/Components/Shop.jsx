@@ -3,37 +3,37 @@ import Card from "./Card";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
 function Shop() {
-  const cardData = [
-    {
-      header: "River Adventure",
-      title: "Explore Lush Trees",
-      img: "/vite.svg",
-      icon: "droplets",
-      description:
-        "Discover beautiful riverside landscapes with ancient trees.",
-    },
-    {
-      header: "Ocean Escape",
-      title: "Walk on Golden Grass",
-      img: "/vite.svg",
-      icon: "waves",
-      description: "Experience the serene beauty of coastal meadows.",
-    },
-    {
-      header: "City Tour",
-      title: "Taste Local Meals",
-      img: "/vite.svg",
-      icon: "bus",
-      description: "Explore urban life and culinary delights.",
-    },
-    {
-      header: "Mountain Hike",
-      title: "Breathtaking Views",
-      img: "/vite.svg",
-      icon: "mountain",
-      description: "Challenge yourself with scenic mountain trails.",
-    },
-  ];
+  // const cardData = [
+  //   {
+  //     header: "River Adventure",
+  //     title: "Explore Lush Trees",
+  //     img: "/vite.svg",
+  //     icon: "droplets",
+  //     description:
+  //       "Discover beautiful riverside landscapes with ancient trees.",
+  //   },
+  //   {
+  //     header: "Ocean Escape",
+  //     title: "Walk on Golden Grass",
+  //     img: "/vite.svg",
+  //     icon: "waves",
+  //     description: "Experience the serene beauty of coastal meadows.",
+  //   },
+  //   {
+  //     header: "City Tour",
+  //     title: "Taste Local Meals",
+  //     img: "/vite.svg",
+  //     icon: "bus",
+  //     description: "Explore urban life and culinary delights.",
+  //   },
+  //   {
+  //     header: "Mountain Hike",
+  //     title: "Breathtaking Views",
+  //     img: "/vite.svg",
+  //     icon: "mountain",
+  //     description: "Challenge yourself with scenic mountain trails.",
+  //   },
+  // ];
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function Shop() {
         setData(response.data);
       })
       .finally(() => {
-        setisLoading(false);
+        // setisLoading(false);
       });
   });
 
@@ -59,7 +59,7 @@ function Shop() {
             header={item.title}
             image={item.image}
             icon={item.icon}
-            description={item.description}
+            description={item.title}
           />
         ))}
       </div>

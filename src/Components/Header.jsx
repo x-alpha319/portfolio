@@ -5,27 +5,27 @@ function Header() {
     <header>
       <div className="flex justify-between bg-black p-8">
         <div>
-          <h1 className="text-xl text-center  text-blue-200 ">
-            <Link to="/">VALUEMAX CODER'S HUB</Link>
+          <h1 className="text-xl font-bold text-green-500">
+            <Link to="/">CyberDev</Link>
           </h1>
         </div>
         <div>
           <ul className="flex  font-bold ">
-            <li className="p-3 text-blue-300">
+            <li className="p-3  text-green-500">
               <Link to="/">HOME</Link>
             </li>
-            <li className="p-3 text-blue-300">
-              <Link to="/shop">ABOUT US</Link>
+            <li className="p-3  text-green-500">
+              <Link to="/shop">SHOP</Link>
             </li>
-            <li className="p-3 text-blue-300">
-              <Link to="/Dash/Dashboard">SERVICES</Link>
+            <li className="p-3  text-green-500">
+              <Link to="./Pages/Task">TASK</Link>
             </li>
-            <li className="p-3 text-blue-300">
-              <a href="#">CONTACT US</a>
+            <li className="p-3  text-green-500">
+              <Link to="/Dash/Product">STORE</Link>
             </li>
-            <li className="p-3  border-1 rounded  text-cyan-300">
-              <button>
-                <Link to="/Auth/Login">LOG IN</Link>
+            <li className="p-3  text-cyan-700">
+              <button className=" border border-cyan-500 px-3 rounded">
+                <Link to="/Auth/Conter">LOG IN</Link>
               </button>
             </li>
           </ul>

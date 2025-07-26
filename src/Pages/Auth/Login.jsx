@@ -34,15 +34,15 @@ function Login() {
       setErrors({});
       console.log("Login successful:", form);
 
-      navigate("/Dashboard");
+      navigate("../Pages/Dash/Dashborad");
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gray-300 p-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-6 rounded shadow-md w-full max-w-sm"
+        className="bg-white p-9 rounded w-full max-w-sm border shadow-lg "
       >
         <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
 
@@ -52,10 +52,10 @@ function Login() {
           placeholder="Name"
           value={form.name}
           onChange={handleChange}
-          className="w-full mb-2 p-2 border rounded"
+          className="w-full mb-10 p-3 border border-gray-400 rounded-lg"
         />
         {errors.name && (
-          <p className="text-red-500 text-sm mb-2">{errors.name}</p>
+          <p className="text-red-600 text-sm mb-2">{errors.name}</p>
         )}
 
         <input
@@ -64,10 +64,10 @@ function Login() {
           placeholder="Email"
           value={form.email}
           onChange={handleChange}
-          className="w-full mb-2 p-2 border rounded"
+          className="w-full mb-10 p-3 border border-gray-400 rounded-lg"
         />
         {errors.email && (
-          <p className="text-red-500 text-sm mb-2">{errors.email}</p>
+          <p className="text-red-600 text-sm mb-2">{errors.email}</p>
         )}
 
         <input
@@ -76,14 +76,14 @@ function Login() {
           placeholder="Password"
           value={form.password}
           onChange={handleChange}
-          className="w-full mb-2 p-2 border rounded"
+          className="w-full mb-10 p-3 border border-gray-400 rounded-lg"
         />
         {errors.password && (
-          <p className="text-red-500 text-sm mb-2">{errors.password}</p>
+          <p className="text-red-600 text-sm mb-2">{errors.password}</p>
         )}
 
         <button
-          type="submit"
+          onClick={handleSubmit}
           className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
         >
           Login

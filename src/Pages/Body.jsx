@@ -1,68 +1,70 @@
 function Body() {
   return (
-    <>
-      <div className="px-6 py-20 bg-gradient-to-b from-black via-gray-900 to-black text-white space-y-12">
-        <section className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 tracking-wide">WHAT WE ARE</h2>
-          <p className="text-lg font-light italic leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            aliquam, ab a ipsa at deserunt tenetur numquam quod obcaecati sint.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
-            soluta necessitatibus reiciendis ducimus, nostrum at nisi animi.
-            Doloribus, ab? Iusto.
+    <div className="min-h-screen bg-black text-white font-sans px-6 md:px-16 py-10 ">
+      {/* Hero Section */}
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between mt-10 ">
+        {/* Text Content */}
+        <div className="max-w-xl mt-10 md:mt-0">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-green-500">
+            Full-Stack Developer
+          </h2>
+          <p className="text-gray-300 mb-4">
+            Building digital experiences that merge creativity with technology
           </p>
-        </section>
+          <p className="text-gray-300 mb-6">
+            Specializing in modern web development and cyber systems
+          </p>
+          <div className="flex space-x-4">
+            <button className="border border-green-500 px-4 py-2 rounded text-green-500 hover:bg-green-500 hover:text-black font-semibold">
+              Let's Connect
+            </button>
+          </div>
+        </div>
 
-        <section className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 tracking-wide">WHAT WE DO</h2>
-          <p className="text-lg font-light italic leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            aliquam, ab a ipsa at deserunt tenetur numquam quod obcaecati sint.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
-            officia natus quas deleniti facilis, libero sequi fuga odit sit amet
-            ratione architecto quisquam vero minus maiores beatae? Ut,
-            laboriosam unde.
-          </p>
-        </section>
+        <div className="relative w-72 h-72 rounded-full overflow-hidden shadow-[0_0_60px_rgba(34,197,94,0.5)] border-4 border-green-500">
+          <img
+            src="/images/profile.png"
+            alt="Profile"
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </section>
 
-        <section className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 tracking-wide">COURSES YOU CAN CHOOSE FROM</h2>
-          <p className="text-lg font-light italic leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            aliquam, ab a ipsa at deserunt tenetur numquam quod obcaecati sint.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            obcaecati dolorem rem, suscipit cupiditate corrupti quisquam sint.
-            Laboriosam aperiam quibusdam, cum eius dicta dolore, quo porro,
-            magni inventore corporis repellat.
-          </p>
-        </section>
-
-        <section className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 tracking-wide">FRONT-END PROGRAMMING</h2>
-          <p className="text-lg font-light italic leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            aliquam, ab a ipsa at deserunt tenetur numquam quod obcaecati sint.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit enim necessitatibus unde sunt architecto laboriosam
-            vero reiciendis ab qui ea, placeat aperiam, quis porro totam
-            corrupti, facere atque est id?
-          </p>
-        </section>
-
-        <section className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 tracking-wide">BACK-END PROGRAMMING</h2>
-          <p className="text-lg font-light italic leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            aliquam, ab a ipsa at deserunt tenetur numquam quod obcaecati sint.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            libero laborum adipisci commodi debitis provident ex necessitatibus
-            velit, repellendus quod, odio molestiae tempora sed, atque voluptas
-            quos. Vero, inventore autem.
-          </p>
-        </section>
-      </div>
-      <hr className="border-gray-600 my-8" />
-    </>
+      {/* Skills Section */}
+      <section className="mt-20">
+        <h2 className="text-3xl font-bold text-green-500 mb-6 text-center">
+          Skills
+        </h2>
+        <marquee behavior="" direction="">
+          <div className=" flex gap-6 text-center text-gray-300">
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4 hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_0_60px_rgba(34,197,94,0.5)]">
+              HTML5
+            </div>
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
+              CSS3
+            </div>
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
+              JavaScript
+            </div>
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
+              Tailwind CSS
+            </div>
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
+              Bootstrap
+            </div>
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
+              React JS
+            </div>
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
+              Git & GitHub
+            </div>
+            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
+              Node js(Loading)
+            </div>
+          </div>
+        </marquee>
+      </section>
+    </div>
   );
 }
 
