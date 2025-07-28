@@ -175,7 +175,7 @@ const ProductManager = () => {
                 </Typography>
                 <label
                   htmlFor="prod-img"
-                  className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors hidden"
+                  className="flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors hidden"
                 >
                   <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <p className="mb-2 text-sm text-gray-500">
