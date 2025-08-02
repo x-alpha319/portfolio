@@ -23,6 +23,7 @@ function Task() {
   };
 
   const addItem = () => {
+    if (!values.name || !values.date) return alert("Please fill all fields");
     setItem((prev) => [
       ...prev,
       { ...values, id: Date.now(), completed: false },
@@ -61,11 +62,11 @@ function Task() {
         const Mins = Math.floor((diff / (1000 * 60)) % 60);
         const Secs = Math.floor((diff / 1000) % 60);
 
-        newCountdown[item.id] = `${String(Days).padStart(2, "0")} : ${String(
+        newCountdown[item.id] = `${String(Days).padStart(2, "0")}d : ${String(
           Hrs
-        ).padStart(2, "0")} : ${String(Mins).padStart(2, "0")} : ${String(
+        ).padStart(2, "0")}h : ${String(Mins).padStart(2, "0")}m : ${String(
           Secs
-        ).padStart(2, "0")}`;
+        ).padStart(2, "0")}s`;
       });
       setCountdowns(newCountdown);
     }, 1000);
@@ -73,17 +74,20 @@ function Task() {
   }, [item]);
 
   return (
-    <div className="p-6 max-w-2xl mx-auto bg-gradient-to-br from-green-900 via-gray-900 to-black text-white rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-green-400">Task Tracker</h2>
+    <div className="max-w-3xl mx-auto px-6 py-12 text-white bg-gradient-to-br from-black via-gray-900 to-black rounded-xl shadow-xl items-center mt-20 mb-52">
+      <h2 className="text-3xl font-bold mb-8 text-lime-400 tracking-tight text-center">
+        Task Manager
+      </h2>
 
-      <div className="flex flex-col md:flex-row gap-4 mb-6">
+      {/* Input Section */}
+      <div className="flex flex-col md:flex-row gap-4 mb-8">
         <input
           name="name"
           type="text"
           placeholder="Task name"
           value={values.name}
           onChange={handleInputChange}
-          className="flex-1 px-4 py-2 rounded-md bg-gray-800 text-white placeholder-gray-400 border border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-lime-500 placeholder-gray-400 focus:ring-2 focus:ring-lime-400"
         />
 
         <input
@@ -91,27 +95,29 @@ function Task() {
           type="datetime-local"
           value={values.date}
           onChange={handleInputChange}
-          className="flex-1 px-4 py-2 rounded-md bg-gray-800 text-white border border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-lime-500 focus:ring-2 focus:ring-lime-400"
         />
 
         <button
           onClick={addItem}
-          className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-md text-white flex items-center gap-1"
+          className="flex items-center justify-center gap-1 px-5 py-3 bg-lime-500 text-black font-semibold rounded-lg hover:bg-lime-400 transition"
         >
           <Plus size={18} /> Add
         </button>
       </div>
 
       {item.length > 0 ? (
-        <ul className="space-y-4">
+        <ul className="space-y-5">
           {item.map((task) => (
             <li
               key={task.id}
-              className="flex flex-col md:flex-row md:items-center justify-between bg-gray-800 border border-green-700 rounded-md p-4 shadow-sm"
+              className="bg-gray-800 border border-lime-600 rounded-lg p-5 flex flex-col md:flex-row md:items-center justify-between gap-3 shadow-sm hover:shadow-lime-500/30 transition-all"
             >
-              <div className="flex-1 mb-2 md:mb-0">
-                <p className="text-lg font-medium">{task.name}</p>
-                <p className="text-sm text-green-400">
+              <div className="flex-1">
+                <p className="text-xl font-semibold text-white mb-1">
+                  {task.name}
+                </p>
+                <p className="text-sm text-lime-400">
                   Time Left:{" "}
                   {countdowns[task.id] === "done" ? (
                     <Check className="inline text-green-500" />
@@ -121,29 +127,33 @@ function Task() {
                 </p>
               </div>
 
-              <p className="text-sm text-gray-400 mb-2 md:mb-0">
+              <div className="text-sm text-gray-400">
                 Due: {formDate(task.date)}
-              </p>
+              </div>
 
-              <div className="flex gap-3">
+              <div className="flex items-center gap-4 text-lg">
                 <button
                   onClick={() => editItem(task)}
-                  className="text-green-400 hover:text-green-300"
+                  className="text-lime-400 hover:text-lime-300"
+                  title="Edit"
                 >
-                  <Pen size={18} />
+                  <Pen size={20} />
                 </button>
                 <button
                   onClick={() => deleteItem(task)}
                   className="text-red-500 hover:text-red-400"
+                  title="Delete"
                 >
-                  <Trash size={18} />
+                  <Trash size={20} />
                 </button>
               </div>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="text-sm text-gray-400">No tasks yet. Add one!</p>
+        <p className="text-center text-gray-400 mt-10">
+          No tasks yet. Add one!
+        </p>
       )}
     </div>
   );

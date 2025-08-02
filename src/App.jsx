@@ -3,12 +3,11 @@ import Body from "./Pages/Body";
 import Shop from "./Components/Shop";
 import MainLayout from "./Layout/MainLayout";
 import DashLayout from "./Layout/DashLayout";
-import Dashboard from "./Pages/Dash/Dashborad";
 import YupLogin from "./Pages/Auth/YupLogin";
-import Task from "./Pages/Task";
-import ProductManagement from "./Pages/Product";
-import Conter from "./Conter";
+import Task from "./Pages/Dash/Task";
+import Conter from "./Pages/Auth/Conter";
 import Authlayout from "./Layout/AuthLayout";
+import ProductManager from "./Pages/Dash/Product";
 
 function App() {
   return (
@@ -27,8 +26,8 @@ function App() {
             </Route>
           </Route>
           <Route>
-            <Route path="/Dash" element={<DashLayout />}>
-              <Route path="product" element={<ProductManagement />} />
+            <Route path="/Pages" element={<DashLayout />}>
+              <Route path="dash/product" element={<ProductManager />} />
             </Route>
           </Route>
         </Routes>

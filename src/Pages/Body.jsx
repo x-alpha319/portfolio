@@ -1,27 +1,28 @@
 function Body() {
   return (
-    <div className="min-h-screen bg-black text-white font-sans px-6 md:px-16 py-10 ">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white px-6 md:px-20 py-16 font-sans">
       {/* Hero Section */}
-      <section className="flex flex-col-reverse md:flex-row items-center justify-between mt-10 ">
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         {/* Text Content */}
-        <div className="max-w-xl mt-10 md:mt-0">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-green-500">
+        <div className="max-w-xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-lime-400 leading-tight mb-6">
             Full-Stack Developer
-          </h2>
-          <p className="text-gray-300 mb-4">
-            Building digital experiences that merge creativity with technology
+          </h1>
+          <p className="text-gray-300 text-lg mb-3">
+            Creating immersive digital experiences at the intersection of
+            creativity and code.
           </p>
-          <p className="text-gray-300 mb-6">
-            Specializing in modern web development and cyber systems
+          <p className="text-gray-400 text-md mb-6">
+            Specialized in building responsive web apps and securing digital
+            systems.
           </p>
-          <div className="flex space-x-4">
-            <button className="border border-green-500 px-4 py-2 rounded text-green-500 hover:bg-green-500 hover:text-black font-semibold">
-              Let's Connect
-            </button>
-          </div>
+          <button className="bg-lime-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-lime-300 transition duration-300 shadow-lg">
+            Let’s Connect
+          </button>
         </div>
 
-        <div className="relative w-72 h-72 rounded-full overflow-hidden shadow-[0_0_60px_rgba(34,197,94,0.5)] border-4 border-green-500">
+        {/* Profile Image */}
+        <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-lime-400 shadow-[0_0_80px_rgba(163,230,53,0.4)] animate-fadeIn">
           <img
             src="/images/profile.png"
             alt="Profile"
@@ -31,38 +32,32 @@ function Body() {
       </section>
 
       {/* Skills Section */}
-      <section className="mt-20">
-        <h2 className="text-3xl font-bold text-green-500 mb-6 text-center">
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold text-lime-400 mb-8 text-center tracking-wide">
           Skills
         </h2>
-        <marquee behavior="" direction="">
-          <div className=" flex gap-6 text-center text-gray-300">
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4 hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_0_60px_rgba(34,197,94,0.5)]">
-              HTML5
-            </div>
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
-              CSS3
-            </div>
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
-              JavaScript
-            </div>
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
-              Tailwind CSS
-            </div>
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
-              Bootstrap
-            </div>
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
-              React JS
-            </div>
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
-              Git & GitHub
-            </div>
-            <div className=" border border-green-500 text-green-500 font-bold rounded-lg p-4  hover:shadow-lg hover:bg-green-950 transition duration-800 shadow-[0_60px_0px_rgba(34,197,94,0.5)]">
-              Node js(Loading)
-            </div>
+
+        <div className="overflow-x-auto">
+          <div className="flex space-x-4 w-max px-2">
+            {[
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "Tailwind CSS",
+              "Bootstrap",
+              "React JS",
+              "Git & GitHub",
+              "Node.js (Loading)",
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="min-w-[140px] text-center text-lime-400 font-bold border border-lime-400 rounded-xl px-4 py-3 hover:bg-lime-900 transition-all duration-300 shadow-md hover:shadow-lime-500/30"
+              >
+                {skill}
+              </div>
+            ))}
           </div>
-        </marquee>
+        </div>
       </section>
     </div>
   );

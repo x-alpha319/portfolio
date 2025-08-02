@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "./Card";
-import axios from "axios";
-import { Loader2 } from "lucide-react";
+
 function Shop() {
-  const [toggle, setToggle] = useState();
+  const [toggle, setToggle] = useState(false);
+
   const cardData = [
     {
       header: "River Adventure",
@@ -35,36 +35,26 @@ function Shop() {
       description: "Challenge yourself with scenic mountain trails.",
     },
   ];
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("https://fakestoreapi.com/products")
-  //     .then((response) => {
-  //       setData(response.data);
-  //     })
-  //     .finally(() => {
-  //       // setisLoading(false);
-  //     });
-  // });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 ">
-      <h1 className="text-3xl font-bold text-center mb-8 text-purple-800">
+    <div className="min-h-screen bg-black px-6 py-14">
+      <h1 className="text-4xl font-extrabold text-center mb-12 text-purple-700 tracking-wide">
         Explore Beautiful Destinations
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {cardData.map((item, index) => (
           <Card
             key={index}
-            header={item.title}
+            header={item.header}
             image={item.img}
             icon={item.icon}
-            description={item.title}
+            description={item.description}
           />
         ))}
       </div>
     </div>
   );
 }
+
 export default Shop;
