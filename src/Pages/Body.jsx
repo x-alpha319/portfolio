@@ -5,6 +5,8 @@ function Body() {
       <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         {/* Text Content */}
         <div className="max-w-xl">
+          <p className="text-2xl font-bold">Hello, I'm Victor, a</p>
+          <br />
           <h1 className="text-4xl md:text-6xl font-extrabold text-lime-400 leading-tight mb-6">
             Full-Stack Developer
           </h1>
@@ -21,7 +23,6 @@ function Body() {
           </button>
         </div>
 
-        {/* Profile Image */}
         <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-lime-400 shadow-[0_0_80px_rgba(163,230,53,0.4)] animate-fadeIn">
           <img
             src="/images/profile.png"
